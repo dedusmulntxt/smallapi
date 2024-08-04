@@ -4,7 +4,7 @@ oh cool my first http api
 CRUD with a small sqlite database on books and authors (or rather just CR)
 
 # installation
-eh this is just a tiny vs studio thing, the exe should be in bin/debug
+eh this is just a tiny vs studio thing, build from there idk
 
 # functionality
 GET authors/{id} shows an author by id along with all their books    
