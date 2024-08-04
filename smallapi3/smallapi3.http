@@ -1,0 +1,61 @@
+@smallapi3_HostAddress = http://localhost:5176
+
+# GET {{smallapi3_HostAddress}}/todos/
+# Accept: application/json
+
+###
+
+# GET {{smallapi3_HostAddress}}/todos/1
+# Accept: application/json
+
+###
+
+# GET {{smallapi3_HostAddress}}/author/
+# Accept: application/json
+
+###
+
+GET {{smallapi3_HostAddress}}/author/1
+Accept: application/json
+#normal
+###
+
+GET {{smallapi3_HostAddress}}/author/2
+Accept: application/json
+#with several books
+###
+
+GET {{smallapi3_HostAddress}}/author/50
+Accept: application/json
+#non-existing author id (404 not found)
+###
+
+GET {{smallapi3_HostAddress}}/author/a
+Accept: application/json
+#non numerical (400 bad request)
+###
+
+POST {{smallapi3_HostAddress}}/author/test
+Accept: application/json
+#inserting new author
+###
+
+POST {{smallapi3_HostAddress}}/author/test
+Accept: application/json
+#inserting an existing author (403 forbidden)
+###
+
+POST {{smallapi3_HostAddress}}/author/1/new%20book
+Accept: application/json
+#inserting a new book
+###
+
+POST {{smallapi3_HostAddress}}/author/50/new%20book
+Accept: application/json
+#inserting a new book (invalid author)
+###
+
+POST {{smallapi3_HostAddress}}/author/5/Ough
+Accept: application/json
+#inserting an already existing book
+###
