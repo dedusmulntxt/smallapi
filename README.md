@@ -1,7 +1,7 @@
 # smallapi
 oh cool my first http api
 
-CRUD with a small sqlite database on books and authors (or rather just CR)
+CRUD with a small sqlite database on books and authors
 
 # installation
 eh this is just a tiny vs studio thing, build from there idk
