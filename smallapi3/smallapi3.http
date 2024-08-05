@@ -40,6 +40,11 @@ Accept: application/json
 #inserting new author
 ###
 
+POST {{smallapi3_HostAddress}}/author/dedusmulntxt
+Accept: application/json
+#inserting new author
+###
+
 POST {{smallapi3_HostAddress}}/author/test
 Accept: application/json
 #inserting an existing author (403 forbidden)
@@ -55,7 +60,48 @@ Accept: application/json
 #inserting a new book (invalid author)
 ###
 
+
 POST {{smallapi3_HostAddress}}/author/5/Ough
 Accept: application/json
 #inserting an already existing book
+###
+
+POST {{smallapi3_HostAddress}}/author/4/new%20book%202
+Accept: application/json
+#inserting a new book
+###
+
+DELETE {{smallapi3_HostAddress}}/author/24
+Accept: application/json
+#delete author (look into the db and check the ids that are available for deletion)
+###
+
+DELETE {{smallapi3_HostAddress}}/book/15 
+Accept: application/json
+#delete book (same as above)
+###
+
+PUT {{smallapi3_HostAddress}}/author/6/dril
+Accept: application/json
+#author name update
+###
+
+PUT {{smallapi3_HostAddress}}/author/6/Dril
+Accept: application/json
+#author name update
+###
+
+PUT {{smallapi3_HostAddress}}/book/4/Moby-Dick
+Accept: application/json
+#book name update
+###
+
+PUT {{smallapi3_HostAddress}}/book/move/4/3
+Accept: application/json
+#book name update
+###
+
+
+PUT {{smallapi3_HostAddress}}/test/
+Accept: application/json
 ###
